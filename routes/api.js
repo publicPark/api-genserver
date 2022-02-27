@@ -3,11 +3,6 @@ const router = express.Router()
 router.use(express.urlencoded({ extended: true }))
 
 const Apidata = require('../models/Apidata')
-const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost/document", {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-})
 
 /* 
 Example request

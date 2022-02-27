@@ -3,11 +3,6 @@ const router = express.Router()
 router.use(express.urlencoded({ extended: true }))
 
 const Document = require('../models/Document')
-const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost/document", {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-})
 
 // 일반
 router.get('/', (req, res) => {

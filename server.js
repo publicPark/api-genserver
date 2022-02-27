@@ -1,11 +1,21 @@
+require('dotenv').config()
 const express = require('express')
-var cors = require('cors')
 const app = express()
-
+var cors = require('cors')
 app.use(cors())
 
-app.set('view engine', 'ejs') // views 폴더
+const mongoose = require('mongoose')
+mongoose.connect(process.env.MONGO_URL, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+})
+.then((result) => console.log("connected to db"))
+.catch((err)=> console.log(err))
+
 app.use(express.static('public')) // public 폴더
+
+app.set('view engine', 'ejs') // views 폴더
+
 // ejs pages
 app.get('/', (req, res) => {
   const message = `Hello!
@@ -24,7 +34,9 @@ app.get('/secret', (req, res) => {
 여기 데이터는 영원함을 보장하지 않습니다
 갑자기 사라질 수 있음 주의
 
-오른쪽 위쪽을 보세요
+오른쪽 위쪽을 보세요.
+New API를 눌러 데이터를 입력하고,
+Save 하시고 url을 복사해서 사용하세요.
 `
   res.render('index', { code, lang:"plaintext", showButtons:true })
 })
