@@ -12,8 +12,8 @@
   <title>New</title>
 </head>
 <body>
-  <form action="/api/save" method="POST">
-    <%- include("_buttons.ejs") %>
+  <form action="/document/save" method="POST">
+    <%- include("_buttons.ejs", { canSave: true }) %>
     <div class="wrapper">
       <div class="line-numbers">
         &gt;

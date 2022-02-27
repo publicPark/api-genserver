@@ -4,6 +4,7 @@
   --point: #8bc34a;
   --darken: #558b2f;
   --lighten: #aed581;
+  --accent: tomato;
 }
 body {
   margin: 0;
@@ -57,10 +58,13 @@ textarea {
 .logo {
   font-size: 2rem;
   text-align: center;
-  text-decoration: none;
   color: #fff;
   width: 100%;
   display: inline-block;
+  text-decoration: none;
+}
+.logo:hover {
+  text-decoration: underline;
 }
 .buttons {
   display: flex;
@@ -84,4 +88,7 @@ textarea {
 }
 .btn:hover {
   background-color: var(--lighten);
+}
+.btn-primary {
+  background-color: tomato;
 }

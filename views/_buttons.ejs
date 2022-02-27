@@ -1,7 +1,10 @@
 <div class="buttons-wrapper">
-  <a href="/" class="logo">JiSyOuN Generator</a>
+  <a href="/secret" class="logo">JiSyOuN Generator</a>
   <div class="buttons">
     <a href="/new" class="btn">New</a>
-    <button class="btn" type="submit">Save</button>
+    <a href="/new-api" class="btn">New API</a>
+    <% if(locals.canSave) { %>
+    <button class="btn btn-primary" type="submit">Save</button>
+    <% } %>
   </div>
 </div>
