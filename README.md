@@ -1,11 +1,6 @@
 # API Generator and Server
 
-코드 실행은 먼저 로컬에서 mongodb를 켠다. 맥이라면
-
-```
-brew services start mongodb-community@5.0
-```
-
+코드 실행은
 ```
 npm i
 npm run dev
