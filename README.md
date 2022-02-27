@@ -1,5 +1,18 @@
 # API Generator and Server
 
+코드 실행은 먼저 로컬에서 mongodb를 켠다. 맥이라면
+
+```
+brew services start mongodb-community@5.0
+```
+
+```
+npm i
+npm run dev
+```
+
+### 아래는 코드 안 받을 사람들
+
 /secret
 여기가 메인이다 님들\
 new API 버튼을 눌러서 JSON API를 만들 수 있어요.\
