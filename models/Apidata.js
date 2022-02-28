@@ -7,4 +7,4 @@ const jsonScheme = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model("Jsondata", jsonScheme)
+module.exports = mongoose.model("Apidata", jsonScheme)

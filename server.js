@@ -32,11 +32,12 @@ app.get('/secret', (req, res) => {
 
 님들아
 여기 데이터는 영원함을 보장하지 않습니다
-갑자기 사라질 수 있음 주의
+갑자기 사라질 수 있으니 주의해주세요
 
-오른쪽 위쪽을 보세요.
-New API를 눌러 데이터를 입력하고,
-Save 하시고 url을 복사해서 사용하세요.
+오른쪽 위쪽에서
+New API를 눌러 
+데이터를 입력하고,
+Save 하시면 끝.
 `
   res.render('index', { code, lang:"plaintext", showButtons:true })
 })
