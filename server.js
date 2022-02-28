@@ -5,7 +5,6 @@ var cors = require('cors')
 app.use(cors())
 
 const mongoose = require('mongoose')
-console.log(process.env.MONGO_URL)
 mongoose.connect(process.env.MONGO_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
