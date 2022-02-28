@@ -54,9 +54,9 @@ app.use('/api', apiRouter)
 const documentRouter = require('./routes/document')
 app.use('/document', documentRouter)
 
-
-app.listen(3333, () => {
-  console.log("hello 3333")
+const port = process.env.PORT || 3333
+app.listen(port, () => {
+  console.log("hello I'm " + port)
 })
 
 
